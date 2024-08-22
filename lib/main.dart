@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 0).getTheme(),
+      theme: AppTheme(selectedColor: 3).getTheme(),
 
       // Comentado para poder utilizar el goRouter
 
