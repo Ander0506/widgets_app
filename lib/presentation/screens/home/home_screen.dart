@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
-import 'package:widgets_app/presentation/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -49,7 +49,8 @@ class _CustomListTile extends StatelessWidget {
       subtitle: Text(menuItem.subTitle),
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
       onTap: () {
-        // navegacion totlamente valida
+        context.push(menuItem.link);
+        // navegacion totalmente valida
 
         // Navigator.of(context).push(
         //   MaterialPageRoute(
@@ -59,7 +60,9 @@ class _CustomListTile extends StatelessWidget {
 
         // Es necesario definir los nombres de rutas en el MaterialApp
 
-        Navigator.pushNamed(context, menuItem.link);
+        // Navigator.pushNamed(context, menuItem.link);
+
+        // GoRouter extiende funcionalidades de navegacion al context
       },
     );
   }
