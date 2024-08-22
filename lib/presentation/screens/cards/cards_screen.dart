@@ -32,8 +32,6 @@ class _CardsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final colors = Theme.of(context).colorScheme;
-
     return SingleChildScrollView(
       padding: const EdgeInsets.all(10),
       child: Column(
@@ -199,7 +197,7 @@ class _CartType4 extends StatelessWidget {
             child: Container(
               decoration: const BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.only(bottomLeft: const Radius.circular(20))
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20))
               ),
               child: IconButton(
                 onPressed:(){},
